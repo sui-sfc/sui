@@ -26,7 +26,7 @@ data = wf.readframes(CHUNK)
 
 print('Now streaming')
 
-while data != '':  
+while data != b'':  
     s.sendto(data, (ADDRESS,PORT))
     stream.write(data , CHUNK)
     data = wf.readframes(CHUNK)
